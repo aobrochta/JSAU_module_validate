@@ -20,14 +20,14 @@ exports.validate = function is_valide(title, content, author, category) {
 
         //on fait les vérifications du titre et contenue
         if (title.length < 5 || content.length < 10) {
-            return 1
+            return false
         }
 
         //on fait les vérifications de auteur
         let author_split = author.split(' ')
         if (author_split.length != 2 || author_split[0].length < 2 ||
         author_split[1].length < 2) {
-            return 2
+            return false
         }
 
         //on fait les vérifications pour la catégorie
@@ -38,7 +38,7 @@ exports.validate = function is_valide(title, content, author, category) {
                 return true
             }
         }
-        return 4
+        return false
     }
-    return 5
+    return false
 }
