@@ -7,7 +7,7 @@
   auteur -> doit contenir nom et prénom séparé par un espace avec au minimum 2
   caractères
   contenu -> doit avoir au minimum 10 caractères
-  catégorie -> doit appartenir à un élément de la liste 'categor'
+  catégorie -> doit appartenir à un élément de la liste 'list_category'
 */
 
 let list_category = ['Monde', 'Sport', 'Culture', 'Voyage', 'Politique', 'Science',
