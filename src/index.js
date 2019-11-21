@@ -4,13 +4,13 @@
   Ce module va servir à détérminer si les valeurs données en paramètre sont
   conforme
   titre -> doit avoir au minimum 5 caractères
-  auteur -> doit contenir nom et prénom séparé par un espace avec au minimum
+  auteur -> doit contenir nom et prénom séparé par un espace avec au minimum 2
   caractères
   contenu -> doit avoir au minimum 10 caractères
-  catégorie -> doit appartenir à un élément du module 'categories'
+  catégorie -> doit appartenir à un élément de la liste 'categor'
 */
 
-let category_valide = ['Monde', 'Sport', 'Culture', 'Voyage', 'Politique', 'Science',
+let list_category = ['Monde', 'Sport', 'Culture', 'Voyage', 'Politique', 'Science',
     'Divertissement', 'Musique', 'Finance', 'Justice']
 
 exports.validate = function is_valide(title, content, author, category) {
@@ -31,9 +31,9 @@ exports.validate = function is_valide(title, content, author, category) {
         }
 
         //on fait les vérifications pour la catégorie
-        for (let i = 0; i < category_valide.length; i++) {
+        for (let i = 0; i < list_category.length; i++) {
             //console.log(category + " " + category_valide[i])
-            if (category.localeCompare(category_valide[i]) == 0) {
+            if (category.localeCompare(list_category[i]) == 0) {
                 //console.log("123")
                 return true
             }
